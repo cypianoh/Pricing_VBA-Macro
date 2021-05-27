@@ -1,0 +1,321 @@
+Sub Macro1()
+'
+' Macro1 Macro
+'
+Sheets("Copy1").Select
+
+For I = 1 To 45991
+    'S
+    If Cells(I, 4) = "S" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & Cells(I, 17) & " " & "S"
+        Cells(I, 14) = 0.9 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) * 1.1 + 15)
+        On Error Resume Next
+    'A1
+    ElseIf Cells(I, 4) = "A1" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & Cells(I, 17) & " " & "A1"
+        Cells(I, 14) = 0.9 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) * 1.1 + 15)
+        On Error Resume Next
+    'A2
+    ElseIf Cells(I, 4) = "A2" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & Cells(I, 17) & " " & "A1"
+        Cells(I, 14) = 0.9 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) * 1.1 + 15 - 10)
+        On Error Resume Next
+    'A3
+    ElseIf Cells(I, 4) = "A3" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & Cells(I, 17) & " " & "A1"
+        Cells(I, 14) = 0.56 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) * 1.1 + 15)
+        On Error Resume Next
+    'B1
+    ElseIf Cells(I, 4) = "B1" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & Cells(I, 17) & " " & "A1"
+        Cells(I, 14) = 0.56 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5)
+        On Error Resume Next
+    'B2
+    ElseIf Cells(I, 4) = "B2" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & Cells(I, 17) & " " & "A1"
+        Cells(I, 14) = 0.4 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5)
+    
+    'B3
+    ElseIf Cells(I, 4) = "B3" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & Cells(I, 17) & " " & "A1"
+        Cells(I, 14) = 0.4 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5)
+        On Error Resume Next
+    'B4
+    ElseIf Cells(I, 4) = "B4" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & Cells(I, 17) & " " & "A1"
+        Cells(I, 14) = 0.25 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5)
+        On Error Resume Next
+    'C1
+    ElseIf Cells(I, 4) = "C1" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & Cells(I, 17) & " " & "A1"
+        Cells(I, 14) = 0.56 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5)
+    
+    'C2
+    ElseIf Cells(I, 4) = "C2" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & Cells(I, 17) & " " & "A1"
+        Cells(I, 14) = 0.4 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5)
+        On Error Resume Next
+    'C3
+    ElseIf Cells(I, 4) = "C3" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & Cells(I, 17) & " " & "A1"
+        Cells(I, 14) = 0.24 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5)
+    
+    'C4
+    ElseIf Cells(I, 4) = "C4" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & Cells(I, 17) & " " & "A1"
+        Cells(I, 14) = 0.24 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5)
+    
+    'C5
+    ElseIf Cells(I, 4) = "C5" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & Cells(I, 17) & " " & "A1"
+        Cells(I, 14) = 0.24 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5)
+        On Error Resume Next
+    'D
+    ElseIf Cells(I, 4) = "D" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & Cells(I, 17) & " " & "D"
+        Cells(I, 14) = Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5
+        On Error Resume Next
+    'E
+    ElseIf Cells(I, 4) = "E" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & Cells(I, 17) & " " & "D"
+        Cells(I, 14) = Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5
+        On Error Resume Next
+   'Su
+    ElseIf Cells(I, 4) = "Su" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & Cells(I, 17) & " " & "S"
+        Cells(I, 14) = 0.9 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) * 1.1 + 15) * 0.5
+        On Error Resume Next
+   'A1u
+    ElseIf Cells(I, 4) = "A1u" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & Cells(I, 17) & " " & "A1"
+        Cells(I, 14) = 0.9 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) * 1.1 + 15) * 0.5
+        On Error Resume Next
+   'A2u
+    ElseIf Cells(I, 4) = "A2u" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & Cells(I, 17) & " " & "A1"
+        Cells(I, 14) = 0.9 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) * 1.1 + 15 - 10) * 0.5
+        On Error Resume Next
+   'A3u
+    ElseIf Cells(I, 4) = "A3u" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & Cells(I, 17) & " " & "A1"
+        Cells(I, 14) = 0.56 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) * 1.1 + 15) * 0.5
+        On Error Resume Next
+    'B1u
+    ElseIf Cells(I, 4) = "B1u" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & Cells(I, 17) & " " & "A1"
+        Cells(I, 14) = 0.56 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5) * 0.5
+        On Error Resume Next
+    'B2u
+    ElseIf Cells(I, 4) = "B2u" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & Cells(I, 17) & " " & "A1"
+        Cells(I, 14) = 0.4 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5) * 0.5
+    'B3u
+    ElseIf Cells(I, 4) = "B3u" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & Cells(I, 17) & " " & "A1"
+        Cells(I, 14) = 0.4 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5) * 0.5
+        On Error Resume Next
+    'B4u
+    ElseIf Cells(I, 4) = "B4u" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & Cells(I, 17) & " " & "A1"
+        Cells(I, 14) = 0.25 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5) * 0.5
+        On Error Resume Next
+   'C1u
+    ElseIf Cells(I, 4) = "C1u" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & Cells(I, 17) & " " & "A1"
+        Cells(I, 14) = 0.56 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5) * 0.5
+        On Error Resume Next
+   'C2u
+    ElseIf Cells(I, 4) = "C2u" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & Cells(I, 17) & " " & "A1"
+        Cells(I, 14) = 0.4 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5) * 0.5
+        On Error Resume Next
+   'C3u
+   ElseIf Cells(I, 4) = "C3u" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & Cells(I, 17) & " " & "A1"
+        Cells(I, 14) = 0.24 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5) * 0.5
+        On Error Resume Next
+   'C4u
+   ElseIf Cells(I, 4) = "C4u" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & Cells(I, 17) & " " & "A1"
+        Cells(I, 14) = 0.24 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5) * 0.5
+        On Error Resume Next
+   'C5u
+   ElseIf Cells(I, 4) = "C5u" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & Cells(I, 17) & " " & "A1"
+        Cells(I, 14) = 0.24 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5) * 0.5
+        On Error Resume Next
+   'Du
+   ElseIf Cells(I, 4) = "Du" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & Cells(I, 17) & " " & "D"
+        Cells(I, 14) = (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5) * 0.5
+        On Error Resume Next
+   'Eu
+   ElseIf Cells(I, 4) = "Eu" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & Cells(I, 17) & " " & "D"
+        Cells(I, 14) = (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5) * 0.5
+        On Error Resume Next
+End If
+Next I
+
+'Others phones #N/A
+For I = 1 To 45991
+If Cells(I, 14) = "#N/A" And Cells(I, 17) = "Others" Then
+        'S
+    If Cells(I, 4) = "S" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & "AT&T" & " " & "S"
+        Cells(I, 14) = 0.8 * 0.9 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) * 1.1 + 15)
+        On Error Resume Next
+    'A1
+    ElseIf Cells(I, 4) = "A1" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & "AT&T" & " " & "A1"
+        Cells(I, 14) = 0.8 * 0.9 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) * 1.1 + 15)
+        On Error Resume Next
+    'A2
+    ElseIf Cells(I, 4) = "A2" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & "AT&T" & " " & "A1"
+        Cells(I, 14) = 0.8 * 0.9 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) * 1.1 + 15 - 10)
+        On Error Resume Next
+    'A3
+    ElseIf Cells(I, 4) = "A3" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & "AT&T" & " " & "A1"
+        Cells(I, 14) = 0.8 * 0.56 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) * 1.1 + 15)
+        On Error Resume Next
+    'B1
+    ElseIf Cells(I, 4) = "B1" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & "AT&T" & " " & "A1"
+        Cells(I, 14) = 0.8 * 0.56 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5)
+        On Error Resume Next
+    'B2
+    ElseIf Cells(I, 4) = "B2" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & "AT&T" & " " & "A1"
+        Cells(I, 14) = 0.8 * 0.4 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5)
+    
+    'B3
+    ElseIf Cells(I, 4) = "B3" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & "AT&T" & " " & "A1"
+        Cells(I, 14) = 0.8 * 0.4 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5)
+        On Error Resume Next
+    'B4
+    ElseIf Cells(I, 4) = "B4" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & "AT&T" & " " & "A1"
+        Cells(I, 14) = 0.8 * 0.25 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5)
+        On Error Resume Next
+    'C1
+    ElseIf Cells(I, 4) = "C1" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & "AT&T" & " " & "A1"
+        Cells(I, 14) = 0.8 * 0.56 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5)
+    
+    'C2
+    ElseIf Cells(I, 4) = "C2" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & "AT&T" & " " & "A1"
+        Cells(I, 14) = 0.8 * 0.4 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5)
+        On Error Resume Next
+    'C3
+    ElseIf Cells(I, 4) = "C3" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & "AT&T" & " " & "A1"
+        Cells(I, 14) = 0.8 * 0.24 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5)
+    
+    'C4
+    ElseIf Cells(I, 4) = "C4" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & "AT&T" & " " & "A1"
+        Cells(I, 14) = 0.8 * 0.24 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5)
+    
+    'C5
+    ElseIf Cells(I, 4) = "C5" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & "AT&T" & " " & "A1"
+        Cells(I, 14) = 0.8 * 0.24 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5)
+        On Error Resume Next
+    'D
+    ElseIf Cells(I, 4) = "D" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & "AT&T" & " " & "D"
+        Cells(I, 14) = 0.8 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5)
+        On Error Resume Next
+    'E
+    ElseIf Cells(I, 4) = "E" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & "AT&T" & " " & "D"
+        Cells(I, 14) = 0.8 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5)
+        On Error Resume Next
+   'Su
+    ElseIf Cells(I, 4) = "Su" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & "AT&T" & " " & "S"
+        Cells(I, 14) = 0.8 * 0.9 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) * 1.1 + 15) * 0.5
+        On Error Resume Next
+   'A1u
+    ElseIf Cells(I, 4) = "A1u" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & "AT&T" & " " & "A1"
+        Cells(I, 14) = 0.8 * 0.9 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) * 1.1 + 15) * 0.5
+        On Error Resume Next
+   'A2u
+    ElseIf Cells(I, 4) = "A2u" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & "AT&T" & " " & "A1"
+        Cells(I, 14) = 0.8 * 0.9 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) * 1.1 + 15 - 10) * 0.5
+        On Error Resume Next
+   'A3u
+    ElseIf Cells(I, 4) = "A3u" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & "AT&T" & " " & "A1"
+        Cells(I, 14) = 0.8 * 0.56 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) * 1.1 + 15) * 0.5
+        On Error Resume Next
+    'B1u
+    ElseIf Cells(I, 4) = "B1u" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & "AT&T" & " " & "A1"
+        Cells(I, 14) = 0.8 * 0.56 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5) * 0.5
+        On Error Resume Next
+    'B2u
+    ElseIf Cells(I, 4) = "B2u" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & "AT&T" & " " & "A1"
+        Cells(I, 14) = 0.8 * 0.4 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5) * 0.5
+    'B3u
+    ElseIf Cells(I, 4) = "B3u" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & "AT&T" & " " & "A1"
+        Cells(I, 14) = 0.8 * 0.4 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5) * 0.5
+        On Error Resume Next
+    'B4u
+    ElseIf Cells(I, 4) = "B4u" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & "AT&T" & " " & "A1"
+        Cells(I, 14) = 0.8 * 0.25 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5) * 0.5
+        On Error Resume Next
+   'C1u
+    ElseIf Cells(I, 4) = "C1u" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & "AT&T" & " " & "A1"
+        Cells(I, 14) = 0.8 * 0.56 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5) * 0.5
+        On Error Resume Next
+   'C2u
+    ElseIf Cells(I, 4) = "C2u" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & "AT&T" & " " & "A1"
+        Cells(I, 14) = 0.8 * 0.4 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5) * 0.5
+        On Error Resume Next
+   'C3u
+   ElseIf Cells(I, 4) = "C3u" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & "AT&T" & " " & "A1"
+        Cells(I, 14) = 0.8 * 0.24 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5) * 0.5
+        On Error Resume Next
+   'C4u
+   ElseIf Cells(I, 4) = "C4u" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & "AT&T" & " " & "A1"
+        Cells(I, 14) = 0.8 * 0.24 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5) * 0.5
+        On Error Resume Next
+   'C5u
+   ElseIf Cells(I, 4) = "C5u" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & "AT&T" & " " & "A1"
+        Cells(I, 14) = 0.8 * 0.24 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5) * 0.5
+        On Error Resume Next
+   'Du
+   ElseIf Cells(I, 4) = "Du" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & "AT&T" & " " & "D"
+        Cells(I, 14) = 0.8 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5) * 0.5
+        On Error Resume Next
+   'Eu
+   ElseIf Cells(I, 4) = "Eu" Then
+        Cells(I, 16) = Cells(I, 9) & " " & Cells(I, 12) & " " & "AT&T" & " " & "D"
+        Cells(I, 14) = 0.8 * (Application.WorksheetFunction.VLookup(Cells(I, 16), Worksheets("data").Range("based"), 2, False) + 5) * 0.5
+        On Error Resume Next
+    End If
+End If
+    
+Next I
+
+        
+    
+    
+'
+End Sub
